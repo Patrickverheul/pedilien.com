@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedilien - Pedicure en Manicure</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+        /* Additional styles for location page */
+        .location-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .google-map {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .google-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .directions-box {
+            background-color: var(--accent-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .directions-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .directions-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .directions-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .directions-list li:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% - 0.5rem);
+            background-color: var(--primary-color);
+        }
+        
+        .parking-info {
+            display: flex;
+            align-items: center;
+            background-color: var(--highlight-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        
+        .parking-info i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        
+        .contact-quick {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 767px) {
+            .location-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .google-map {
+                height: 300px;
+                order: -1;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/pedilien_logo.svg" alt="Pedilien Logo" class="logo">
+                </a>
+            </div>
+            <div class="contact-header">
+                <a href="tel:0620353615" class="phone-number">
+                    <i class="fas fa-phone-alt"></i> 06 20 35 36 15
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Wat doe ik</a></li>
+                    <li><a href="prices.html">Prijzen</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="location.html">Locatie</a></li>
+                </ul>
+            </nav>
+            <div class="menu-overlay"></div>
+        </div>
+    </header>
+    
+    <!-- Dark Mode Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Pedicure en manicure Pedilien</h1>
+                <p class="tagline">Persoonlijke aandacht staat bovenaan bij Pedilien</p>
+                <a href="contact.html" class="btn btn-primary">Maak een afspraak</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/pedilien_treatment_photo.jpeg" alt="Pedicure behandeling" class="treatment-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-image">
+                <img src="images/pedilien_clinic_photo.jpeg" alt="Pedilien Clinic" class="clinic-image">
+            </div>
+            <div class="about-content">
+                <h2>Over Pedilien</h2>
+                <p>Mijn naam is Lienchi Prins-Valks, gediplomeerd pedicure en gecertificeerd manicure. Aangesloten bij de branche organisatie voor pedicures "Provoet". Ik werk volgens de branchecode welke geldt voor alle aangesloten Pedicures.</p>
+                <div class="certification">
+                    <img src="images/provoet_logo.svg" alt="ProVoet Certificering" class="provoet-logo">
+                    <p>Aangesloten bij de branche organisatie voor pedicures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Mijn Diensten</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Pedicure</h3>
+                    <p>Professionele voetbehandelingen voor gezonde en verzorgde voeten.</p>
+                    <a href="services.html#pedicure" class="btn btn-secondary">Meer info</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3>Manicure</h3>
+                    <p>Verzorgende behandelingen voor mooie en gezonde nagels.</p>
+                    <a href="services.html#manicure" class="btn btn-secondary">Meer info</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hot-tub"></i>
+                    </div>
+                    <h3>Massage</h3>
+                    <p>Ontspannende voetreflexmassage en hotstone behandelingen.</p>
+                    <a href="services.html#massage" class="btn btn-secondary">Meer info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Neem Contact Op</h2>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Telefoon</h3>
+                        <p><a href="tel:0620353615">06 20 35 36 15</a></p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@pedilien.com">info@pedilien.com</a></p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adres</h3>
+                        <p>Schipbeek 15<br>8223 DS Lelystad</p>
+                    </div>
+                </div>
+                <p class="hours">Ik werk niet in de weekenden en avonden. Afspraak in overleg.</p>
+                <a href="contact.html" class="btn btn-primary">Maak een afspraak</a>
+            </div>
+            <div class="map-container">
+                <div class="google-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.5519943461373!2d5.4722863!3d52.5280873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6357a9a0a9c8d%3A0x2a0f0c5c0c0c0c0c!2sSchipbeek%2015%2C%208223%20DS%20Lelystad!5e0!3m2!1snl!2snl!4v1617289999999!5m2!1snl!2snl" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Google Maps locatie van Pedilien">
+                    </iframe>
+                </div>
+                <a href="location.html" class="btn btn-secondary">Routebeschrijving</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/pedilien_logo.svg" alt="Pedilien Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <h3>Snelle Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Wat doe ik</a></li>
+                        <li><a href="prices.html">Prijzen</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="location.html">Locatie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:0620353615">06 20 35 36 15</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@pedilien.com">info@pedilien.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Schipbeek 15, 8223 DS Lelystad</p>
+                </div>
+                <div class="footer-certification">
+                    <img src="images/provoet_logo.svg" alt="ProVoet Certificering" class="footer-provoet">
+                    <p>Aangesloten bij de branche organisatie voor pedicures</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pedilien - Alle rechten voorbehouden</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="contact.html" class="btn btn-cta">Maak een afspraak</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

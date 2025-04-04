@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijzen - Pedilien</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for pricing page */
+        .price-category {
+            margin-bottom: 3rem;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .price-table th, .price-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background-color: var(--accent-color);
+        }
+        
+        .price-table tr:hover {
+            background-color: var(--highlight-color);
+        }
+        
+        .price-amount {
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: right;
+        }
+        
+        .price-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .popular-service {
+            position: relative;
+        }
+        
+        .popular-service::after {
+            content: "Populair";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0 0 0 8px;
+        }
+        
+        @media (max-width: 767px) {
+            .price-table th, .price-table td {
+                padding: 0.75rem;
+            }
+            
+            .price-description {
+                display: none;
+            }
+            
+            .price-table .mobile-description {
+                display: block;
+                font-size: 0.85rem;
+                margin-top: 0.5rem;
+                color: #666;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/pedilien_logo.svg" alt="Pedilien Logo" class="logo">
+                </a>
+            </div>
+            <div class="contact-header">
+                <a href="tel:0620353615" class="phone-number">
+                    <i class="fas fa-phone-alt"></i> 06 20 35 36 15
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Wat doe ik</a></li>
+                    <li><a href="prices.html" class="active">Prijzen</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="location.html">Locatie</a></li>
+                </ul>
+            </nav>
+            <div class="menu-overlay"></div>
+        </div>
+    </header>
+    
+    <!-- Dark Mode Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Prijzen / Behandelingen</h1>
+            <p>Er wordt gewerkt met het Protocol van de Branche organisatie Provoet</p>
+        </div>
+    </section>
+
+    <!-- Pricing Content -->
+    <section class="pricing-content">
+        <div class="container">
+            <!-- Pedicure Prices -->
+            <div class="price-category" id="pedicure">
+                <h2>Pedicure Behandelingen</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Behandeling</th>
+                            <th>Prijs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Pedicure Kort</strong>
+                                <p class="price-description">Nagels knippen, nagelomgeving reinigen. Als afsluiting een voetencrème inmasseren.</p>
+                            </td>
+                            <td class="price-amount">€ 25,50</td>
+                        </tr>
+                        <tr class="popular-service">
+                            <td>
+                                <strong>Pedicure Basis</strong>
+                                <p class="price-description">Nagels knippen, nagelomgeving reinigen, eelt, kloven of likdoorn(s) verwijderen of verdikte nagels dunner frezen. Als afsluiting een voetencrème inmasseren.</p>
+                            </td>
+                            <td class="price-amount">€ 34,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Pedicure Standaard</strong>
+                                <p class="price-description">Nagels knippen, nagelomgeving reinigen, eelt, kloven, likdoorn(s) verwijderen of verdikte nagels dunner frezen, voetenscrub of nagels lakken. (graag slippers meenemen) Als afsluiting een voetencrème inmasseren.</p>
+                            </td>
+                            <td class="price-amount">€ 42,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Pedicure Uitgebreid</strong>
+                                <p class="price-description">Nagels knippen, nagelomgeving reinigen, eelt, kloven, likdoorn(s) verwijderen, verdikte nagels dunner frezen, voetenscrub en teennagels lakken. (graag slippers meenemen) Als afsluiting een voetencrème inmasseren.</p>
+                            </td>
+                            <td class="price-amount">€ 51,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Nagelreparatie</strong>
+                                <p class="price-description">Verdikte nagel, schimmel nagel of gescheurde nagel repareren met NCM sculpture gel.</p>
+                            </td>
+                            <td class="price-amount">vanaf € 14,50</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>NCM French-Pedicure</strong>
+                                <p class="price-description">Cosmetische voetbehandeling voor mooie verzorgde teennagels met een wit randje. Alleen voor gezonde teennagels! Mooi voor de zomermaanden en/of vakantie.</p>
+                            </td>
+                            <td class="price-amount">€ 38,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>NCM French-Pedicure Uitgebreid</strong>
+                                <p class="price-description">Pedicure Basis plus NCM French-Pedicure.</p>
+                            </td>
+                            <td class="price-amount">€ 61,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Manicure Prices -->
+            <div class="price-category" id="manicure">
+                <h2>Manicure Behandelingen</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Behandeling</th>
+                            <th>Prijs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="popular-service">
+                            <td>
+                                <strong>Manicure Basis</strong>
+                                <p class="price-description">Handnagels vijlen, nagelomgeving reinigen en verzorgen, blanke nagellak aanbrengen of nagels polijsten en handen inmasseren met een verzorgende creme.</p>
+                            </td>
+                            <td class="price-amount">€ 23,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Manicure Basis met nagellak</strong>
+                            </td>
+                            <td class="price-amount">€ 28,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Manicure Basis met gellak</strong>
+                            </td>
+                            <td class="price-amount">€ 33,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Manicure Standaard</strong>
+                                <p class="price-description">Manicure Basis plus scrub en ontspannende hand en onderarm massage.</p>
+                            </td>
+                            <td class="price-amount">€ 38,00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Gellak verwijderen</strong>
+                            </td>
+                            <td class="price-amount">€ 10,50</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Biab behandeling</strong>
+                                <p class="price-description">Biab staat voor "Builder in a bottle." Biab nagels zitten tussen gellak en acrylnagels. Biab nagels zijn dikker dan gellak nagels, maar dunner dan acryl nagels. Biab verstevigd de natuurlijke nagels en geeft de nagels kans om te groeien.</p>
+                            </td>
+                            <td class="price-amount">€ 38,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Massage Prices -->
+            <div class="price-category" id="massage">
+                <h2>Massage Behandelingen</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Behandeling</th>
+                            <th>Prijs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Hotstone massage onderbenen en voeten</strong>
+                                <p class="price-description">Bij deze massage wordt gebruik gemaakt van warme Basaltstenen, deze worden opgewarmd tot 45 - 50 graden. De warmte zorgt er voor dat de spieren zich beter kunnen ontspannen een betere doorbloeding. Draag makkelijke kleding waarbij de kuiten vrij gemaakt kunnen worden.</p>
+                            </td>
+                            <td class="price-amount">€ 37,00</td>
+                        </tr>
+                        <tr class="popular-service">
+                            <td>
+                                <strong>Ontspannende Voetreflexmassage</strong>
+                                <p class="price-description">Tijdens voetreflexmassage worden er druk en massage gegeven op verschillende punten op je voeten. Deze punten staan in verbinding met organen, gewrichten, weefsels, spieren en zenuwen door het hele lichaam heen. Deze behandeling is gericht op ontspanning. Draag makkelijke kleding waarbij de kuiten vrij gemaakt kunnen worden.</p>
+                            </td>
+                            <td class="price-amount">€ 47,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Gift Voucher -->
+            <div class="price-category" id="gift">
+                <h2>Cadeaubon</h2>
+                <div class="gift-card">
+                    <div class="gift-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="gift-info">
+                        <h3>Cadeaubon naar keuze</h3>
+                        <p>Verwen iemand met een Pedicure of manicure behandeling. Neem contact op voor meer informatie over de mogelijkheden.</p>
+                        <a href="contact.html" class="btn btn-primary">Informeer naar mogelijkheden</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cancellation Policy -->
+    <section class="policy-section">
+        <div class="container">
+            <h2>Afspraak Annuleren</h2>
+            <div class="policy-box">
+                <p><strong>Let op:</strong> Afspraken die om een of andere reden niet door kunnen gaan moeten 24 uur van te voren telefonisch worden afgezegd. Wanneer u uw afspraak niet 24 uur van tevoren afzegt, dan ben ik genoodzaakt om 50% van de geplande behandeling in rekening te brengen!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/pedilien_logo.svg" alt="Pedilien Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <h3>Snelle Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Wat doe ik</a></li>
+                        <li><a href="prices.html">Prijzen</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="location.html">Locatie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:0620353615">06 20 35 36 15</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@pedilien.com">info@pedilien.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Schipbeek 15, 8223 DS Lelystad</p>
+                </div>
+                <div class="footer-certification">
+                    <img src="images/provoet_logo.svg" alt="ProVoet Certificering" class="footer-provoet">
+                    <p>Aangesloten bij de branche organisatie voor pedicures</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pedilien - Alle rechten voorbehouden</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="contact.html" class="btn btn-cta">Maak een afspraak</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

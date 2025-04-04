@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wat doe ik - Pedilien</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/pedilien_logo.svg" alt="Pedilien Logo" class="logo">
+                </a>
+            </div>
+            <div class="contact-header">
+                <a href="tel:0620353615" class="phone-number">
+                    <i class="fas fa-phone-alt"></i> 06 20 35 36 15
+                </a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Wat doe ik</a></li>
+                    <li><a href="prices.html">Prijzen</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="location.html">Locatie</a></li>
+                </ul>
+            </nav>
+            <div class="menu-overlay"></div>
+        </div>
+    </header>
+    
+    <!-- Dark Mode Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Wat doe ik</h1>
+            <p class="tagline">Persoonlijke aandacht staat bovenaan bij Pedilien</p>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="services-content">
+        <div class="container">
+            <div class="service-intro">
+                <p>Bij Pedilien bied ik professionele pedicure en manicure behandelingen aan met persoonlijke aandacht voor uw wensen en behoeften. Hieronder vindt u een overzicht van de diensten die ik aanbied.</p>
+            </div>
+
+            <!-- Pedicure Services -->
+            <div class="service-category" id="pedicure">
+                <h2>Pedicure Behandelingen</h2>
+                <div class="service-details">
+                    <div class="service-image">
+                        <img src="images/pedilien_treatment_photo.jpeg" alt="Pedicure behandeling" class="treatment-image">
+                    </div>
+                    <div class="service-list">
+                        <ul>
+                            <li>Voeten desinfecteren</li>
+                            <li>Nagels knippen en de nagelomgeving reinigen</li>
+                            <li>Nagels lakken (nagellak/gellak/biab)</li>
+                            <li>Nagelreparatie</li>
+                            <li>Het verwijderen van (eelt/kloven/likdoorns)</li>
+                            <li>Het behandelen van ingegroeide/ingroeiende teennagel(s)</li>
+                            <li>Het dunner frezen van verdikte teennagel(s)</li>
+                            <li>Voeten inmasseren met een verzorgende voetencreme</li>
+                            <li>Scrub behandeling</li>
+                            <li>Hotstone massage onderbenen en voeten</li>
+                            <li>Ontspannende Voetreflexmassage</li>
+                        </ul>
+                        <a href="prices.html#pedicure" class="btn btn-primary">Bekijk prijzen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manicure Services -->
+            <div class="service-category" id="manicure">
+                <h2>Manicure Behandelingen</h2>
+                <div class="service-details">
+                    <div class="service-list">
+                        <ul>
+                            <li>Nagels vijlen, nagelomgeving reinigen en verzorgen</li>
+                            <li>Nagellak aanbrengen (gewoon/gellak/biab)</li>
+                            <li>Nagels polijsten</li>
+                            <li>Hand en onderarm massage</li>
+                            <li>Handscrub</li>
+                            <li>Handen inmasseren met een verzorgende creme</li>
+                        </ul>
+                        <a href="prices.html#manicure" class="btn btn-primary">Bekijk prijzen</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/pedilien_clinic_photo.jpeg" alt="Manicure behandeling" class="treatment-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massage Services -->
+            <div class="service-category" id="massage">
+                <h2>Massage Behandelingen</h2>
+                <div class="service-details">
+                    <div class="service-image">
+                        <div class="service-icon-large">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                    </div>
+                    <div class="service-list">
+                        <h3>Hotstone massage onderbenen en voeten</h3>
+                        <p>Bij deze massage wordt gebruik gemaakt van warme Basaltstenen, deze worden opgewarmd tot 45 - 50 graden. De warmte zorgt er voor dat de spieren zich beter kunnen ontspannen een betere doorbloeding. Draag makkelijke kleding waarbij de kuiten vrij gemaakt kunnen worden.</p>
+                        
+                        <h3>Ontspannende Voetreflexmassage</h3>
+                        <p>Tijdens voetreflexmassage worden er druk en massage gegeven op verschillende punten op je voeten. Deze punten staan in verbinding met organen, gewrichten, weefsels, spieren en zenuwen door het hele lichaam heen. Deze behandeling is gericht op ontspanning. Draag makkelijke kleding waarbij de kuiten vrij gemaakt kunnen worden.</p>
+                        
+                        <a href="prices.html#massage" class="btn btn-primary">Bekijk prijzen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Maak een afspraak</h2>
+            <p>Wilt u een afspraak maken voor een van deze behandelingen? Neem dan contact met mij op.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary">Contact opnemen</a>
+                <a href="prices.html" class="btn btn-secondary">Bekijk alle prijzen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/pedilien_logo.svg" alt="Pedilien Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <h3>Snelle Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Wat doe ik</a></li>
+                        <li><a href="prices.html">Prijzen</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="location.html">Locatie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:0620353615">06 20 35 36 15</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@pedilien.com">info@pedilien.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Schipbeek 15, 8223 DS Lelystad</p>
+                </div>
+                <div class="footer-certification">
+                    <img src="images/provoet_logo.svg" alt="ProVoet Certificering" class="footer-provoet">
+                    <p>Aangesloten bij de branche organisatie voor pedicures</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Pedilien - Alle rechten voorbehouden</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="contact.html" class="btn btn-cta">Maak een afspraak</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
