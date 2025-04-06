@@ -195,48 +195,6 @@
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form-section">
-        <div class="container">
-            <h2>Stuur een bericht</h2>
-            <p>Vul het onderstaande formulier in om een afspraak te maken of voor meer informatie.</p>
-            
-            <div class="contact-form-container">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Naam *</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Telefoonnummer *</label>
-                        <input type="tel" id="phone" name="phone" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-mail *</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service" class="form-label">Gewenste behandeling</label>
-                        <select id="service" name="service" class="form-input">
-                            <option value="">Selecteer een behandeling</option>
-                            <option value="pedicure">Pedicure</option>
-                            <option value="manicure">Manicure</option>
-                            <option value="massage">Massage</option>
-                            <option value="other">Anders</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message" class="form-label">Bericht *</label>
-                        <textarea id="message" name="message" class="form-textarea" required></textarea>
-                    </div>
-                    <div class="form-group full-width">
-                        <button type="submit" class="btn btn-primary">Verstuur bericht</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Cancellation Policy -->
     <section class="policy-section">
         <div class="container">
@@ -288,17 +246,6 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    <script>
-        // Simple form validation and submission handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // In a real implementation, you would send the form data to a server
-            // For this prototype, we'll just show a success message
-            
-            alert('Bedankt voor uw bericht! Ik neem zo spoedig mogelijk contact met u op.');
-            this.reset();
-        });
-    </script>
+    
 </body>
 </html>
