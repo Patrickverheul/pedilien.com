@@ -19,7 +19,7 @@
   --primary-color: #4a9dff;     /* Brighter blue for dark mode */
   --secondary-color: #6ed186;   /* Vibrant green for dark mode */
   --background-color: #1a3a5a;  /* Deep blue background instead of dark gray */
-  --text-color: #ffffff;        /* White text for better contrast */
+  --text-color: #333333;        /* Dark Grey text for better contrast */
   --accent-color: #234870;      /* Lighter blue for section backgrounds */
   --footer-color: #183050;      /* Slightly darker blue for footer */
   --button-hover: #3a8bd8;      /* Hover state for dark mode */
